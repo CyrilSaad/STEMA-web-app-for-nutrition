@@ -1,0 +1,244 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#passErr {
+    /* visibility: hidden; */
+    color: red;
+    font-size: small;
+    width: 90%;
+    margin: auto;
+    text-align: left;
+    display: none;
+}
+::placeholder {
+    text-align: left;
+    font-size: 1em;
+    padding-left: 5%;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    a:visited {
+        text-decoration: none;
+        color: none;
+    }
+
+    a :hover {
+        color: #fff;
+    }
+.header {
+    display: inline-block;
+    width: 100%;
+    min-height: 70px;
+    text-align: center;
+    background: rgb(27,138,81);
+    background: linear-gradient(90deg, rgba(27,138,81,1) 0%, rgba(215,212,94,1) 40%, rgba(233,88,41,1) 100%);
+    }
+
+.stema-letters {
+    font-size: 3em;
+}
+.hm-page-header {
+    width: 100%;
+
+}
+ .hm-page-header img:first-child {
+     width: 100%;
+     max-height: 100px;
+ }
+
+ .header-burger-menu  {
+     position: relative;
+    padding-left: 40px;
+    height: 70px;
+    display: inline-block;
+    float: left;
+ }
+
+ .header-burger-menu img{
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+ }
+
+ .hm-page-header-stema {
+   display: inline-block;
+   padding-top: 15px;
+ }
+ .hm-page-header-stema img {
+     display: block;
+     margin: auto;
+ }
+ .hm-page-search {
+    border-bottom: 5px solid orange;
+    display: flex;
+    padding-bottom: 15px;
+    margin-top: 20px;
+    padding-left: 40px;
+ }
+
+ .hm-page-searchbar {
+    width: 80%;
+    margin: 0 10px;
+    letter-spacing: .3em;
+    padding-left: 15px;
+    color: orange;
+    font-size: 1.3em;
+    border: none;
+ }
+
+ .hm-page-header-nutr img {
+     width: 10%;
+ }
+
+ .hm-page-ns-logo {
+    padding-top: 50px;
+    margin: auto;
+    width: 40%;
+        text-align: center;
+        padding-top: 50px;
+        margin: auto;
+ }
+
+ .ns-logo-index {
+     margin-top: 20px;
+ }
+ .hm-page-ns-logo img {
+     
+ }
+
+ .ns-logo-desc {
+    display: inline-block;
+    text-align: left;
+ }
+.ns-logo-desc-info {
+    display: inline-block;
+    font-size: 1.5em;
+}
+
+.toggle-menu {
+    background: linear-gradient(90deg, rgba(27,138,81,0.9) 15%, rgba(215,212,94,0.9) 90%);
+    width: 70%;
+    position: fixed;
+    padding-bottom: 30px;
+    max-width: 345px;
+    display: none;
+
+box-shadow: inset 0px 0px 7px 0px rgba(0,0,0,1)
+}
+
+.burger-menu-img {padding-top: 15px; text-align: center;}
+
+.menu-list {list-style-type: none;   padding: 0 20px;}
+
+.menu-list li {
+    font-weight: bold;
+    font-size: 1.5em;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.menu-icon {width: 20%; display: inline-block;}
+
+.menu-item {width: 70%; display: inline-block; vertical-align: super;}
+
+.menu-icon img {width: 80%;}
+
+
+
+/* Login screen style */
+.center-screen {
+    margin: auto;
+    max-width: 1000px;
+}
+.log-in-form {
+    margin-top: 10%;
+    box-shadow: inset 0px 0px 7px 0px rgba(0,0,0,1);
+    border-radius: 10px;
+    padding-bottom: 75px;
+}
+.log-in-header {
+    background: linear-gradient(90deg, rgba(27,138,81,1) 0%, rgba(215,212,94,1) 40%, rgba(233,88,41,1) 100%);
+    min-height: 100px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.log-in-header h1 {margin: auto;}
+.log-in-user-info {
+  text-align: center;
+  margin-top: 10%;
+  }
+
+  .log-in-user-info input {
+    width: 90%;
+    padding-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    min-height: 50px;
+  }
+  
+  .log-in-user-info input::placeholder {
+    text-align: left;
+    font-size: 2em;
+    padding-top: 20px;
+    width: 50%;
+    /* padding-left: 5%; */
+  }
+
+  .log-in-submit {
+    background: linear-gradient(90deg, rgba(27,138,81,1) 0%, rgba(215,212,94,1) 40%, rgba(233,88,41,1) 100%);
+    margin-top: 50px;
+  }
+  /* Style the submit button */
+  input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    margin-top: 35px;
+    border-radius: 30px;
+    padding-bottom: 10px;
+    font-size: 1.5em;
+  }
+
+  .forgot-pass a { 
+    color: #4CAF50;
+    font-weight: bold;
+  }
+  .forgot-pass {
+      text-align: left;
+      width: 90%;
+      margin: auto;
+  }
+  
+  .sign-up-header {
+    color: #ccdddd;
+    margin-top: 75px;
+  }
+
+  .sign-up a {
+      color: #4CAF50;
+      font-weight: bold;
+      
+  }
+/* Mobile screen */
+@media only screen and (max-width: 500px) {
+    .hm-page-ns-logo {
+        width: 97%;
+        text-align: center;
+        padding-top: 50px;
+        margin: auto;
+    }
+}
