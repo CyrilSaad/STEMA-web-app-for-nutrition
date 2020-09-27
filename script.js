@@ -27,3 +27,31 @@ function animateMe(element) {
             
         }
     }
+
+    function changeImage(image) {
+        
+        if (image == 'product_image_1') {
+            var curr = document.getElementById('image-1').style;
+            var img = document.getElementById('image-2').style;
+            var img2 = document.getElementById('image-3').style;
+            curr.display = "block";
+            img.display = "none";
+            img2.display = "none";
+        }
+        if (image == 'product_image_2') {
+            var curr = document.getElementById('image-2').style;
+            var img = document.getElementById('image-1').style;
+            var img2 = document.getElementById('image-3').style;
+            curr.display = "block";
+            img.display = "none";
+            img2.display = "none";
+        }
+        if (image == 'product_image_3') {
+            var curr = document.getElementById('image-3').style;
+            var img = document.getElementById('image-1').style;
+            var img2 = document.getElementById('image-2').style;
+            curr.display = "block";
+            img.display = "none";
+            img2.display = "none";
+        }
+    }

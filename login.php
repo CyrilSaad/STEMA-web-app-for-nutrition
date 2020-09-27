@@ -1,6 +1,7 @@
 <?php
 include('config.php');
 session_start();
+$errors = array();
 if (isset($_POST['login_user'])) {
 
   $username = mysqli_real_escape_string($db, $_POST['username']);
@@ -11,15 +12,18 @@ if (isset($_POST['login_user'])) {
   if (empty($password)) {
   	array_push($errors, "Password is required");
   }
-
   if (count($errors) == 0) {
-  	$password = md5($password);
+	$password = md5($password);
   	$query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
-  	$results = mysqli_query($db, $query);
+	  $results = mysqli_query($db, $query);
+	  $result = mysqli_fetch_assoc($db, $results);
+	  echo mysqli_num_rows($results);
   	if (mysqli_num_rows($results) == 1) {
-  	    $_SESSION['username'] = $username;
-		$_SESSION['loggedin'] = true;
-		header('location: home.php');
+		  $_SESSION['username'] = $username;
+		  $_SESSION['password'] = $password;
+		  $_SESSION['email'] = $result['email'];
+		  $_SESSION['loggedin'] = true;
+		header('location: index.php');
 
   	}else {
   		array_push($errors, "Wrong username/password combination");

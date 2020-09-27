@@ -13,7 +13,7 @@ if (isset($_POST['reg_user'])) {
   $email = mysqli_real_escape_string($db, $_POST['email']);
   $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
   $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
-
+  $token = bin2hex(random_bytes(50));
   // form validation: ensure that the form is correctly filled ...
   // by adding (array_push()) corresponding error unto $errors array
   if (empty($username)) { array_push($errors, "Username is required"); }
@@ -43,11 +43,14 @@ if (isset($_POST['reg_user'])) {
   if (count($errors) == 0) {
   	$password = md5($password_1);//encrypt the password before saving in the database
 
-  	$query = "INSERT INTO users (username, email, password) 
-  			  VALUES('$username', '$email', '$password')";
+  	$query = "INSERT INTO users (username, email, password, token) 
+  			  VALUES('$username', '$email', '$password', '$token' )";
   	mysqli_query($db, $query);
-  	$_SESSION['username'] = $username;
-  	$_SESSION['success'] = "You are now logged in";
-  	header('location: home.html');
+    $_SESSION['username'] = $username;
+    $_SESSION['password'] = $password;
+    $_SESSION['email'] = $email;
+    $_SESSION['loggedin'] = true;
+  	$_SESSION['success'] = "Welcome, '$username'!";
+  	header('location: index.php');
   }
 }
